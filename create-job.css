@@ -482,8 +482,9 @@
   align-items: flex-start;
   padding: 8px 14px;
   position: relative;
-  align-self: stretch;
-  width: 100%;
+  align-self: flex-start;
+  width: 361px;
+  box-sizing: border-box;
   flex: 0 0 auto;
   background-color: #fffdf9;
   border-radius: 18px;
