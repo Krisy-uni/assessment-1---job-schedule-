@@ -170,7 +170,7 @@
   justify-content: center;
   position: absolute;
   background-color: #ffffff;
-  border: 1px solid;
+  border: 1px solid #eadfd5;
 }
 
 .validation-error .kitchen-installation {
@@ -213,7 +213,7 @@
   height: 50px;
   background-color: #ffffff;
   border-radius: 13px;
-  border: 1px solid;
+  border: 1px solid #eadfd5;
   border-color: #eadfd5;
 }
 
@@ -251,7 +251,7 @@
   justify-content: center;
   position: absolute;
   background-color: #ffffff;
-  border: 1px solid;
+  border: 1px solid #e54848;
 }
 
 .validation-error .text-wrapper-43 {
@@ -320,7 +320,7 @@
   justify-content: center;
   position: absolute;
   background-color: #ffffff;
-  border: 1px solid;
+  border: 1px solid #eadfd5;
 }
 
 .validation-error .text-wrapper-44 {
@@ -363,7 +363,7 @@
   justify-content: center;
   position: absolute;
   background-color: #ffffff;
-  border: 1px solid;
+ border: 1px solid #eadfd5;
 }
 
 .validation-error .label-5 {
@@ -389,7 +389,7 @@
   justify-content: center;
   position: absolute;
   background-color: #ffffff;
-  border: 1px solid;
+  border: 1px solid #eadfd5;
 }
 
 .validation-error .text-wrapper-45 {
@@ -508,15 +508,15 @@
 
 .validation-error .paragraph-3 {
   position: absolute;
-  top: 185px;
-  left: 19px;
-  width: 359px;
-  height: 19px;
+  top: 205px;
+  left: 10px;
+  width: 331px;
+  height: 16px;
 }
 
 .validation-error .text-wrapper-47 {
-  position: absolute;
-  top: 7px;
+  position: relative;
+  top: 0;
   left: 0;
   font-family: "Inter", Helvetica;
   font-weight: 400;
