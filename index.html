@@ -1,85 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Schedule - Login</title>
-    <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f6f6f6;
-        margin: 0;
-        padding: 0;
-    }
-
-    main {
-        max-width: 360px;
-        margin: 80px auto;
-        background: white;
-        padding: 32px;
-        border-radius: 16px;
-    }
-
-    h1 {
-        margin-bottom: 8px;
-    }
-
-    input {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 12px;
-        margin-top: 6px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-        margin-top: 20px;
-        border: none;
-        border-radius: 8px;
-        background: #c85a4a;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-    }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="globals.css">
+<link rel="stylesheet" href="style.css">
+<title>JobFlow Sign In</title>
 </head>
-
 <body>
-
-    <main>
-        <h1>Welcome Back</h1>
-        <p>Sign in to manage your jobs</p>
-
-        <form method="post" action="#">
-            <label for="email">Email</label><br>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required
+<main class="login" data-model-id="13:652">
+<section class="section-login" aria-labelledby="welcome-heading">
+<div class="container-6" aria-label="Device status">
+<div class="div-wrapper-2">
+<span class="text-wrapper-8">9:41</span>
+</div>
+<div class="div-wrapper-2" aria-hidden="true">
+<span class="text-wrapper-9">●●● Wi‑Fi ▰</span>
+</div>
+</div>
+<header class="container-4">
+<div class="container-5" aria-hidden="true">
+<span class="text-wrapper-6">J</span>
+</div>
+<div class="text">
+<span class="text-wrapper-7">JobFlow</span>
+</div>
+</header>
+<div class="container-3">
+<div class="div">
+<h1 class="text-wrapper-5" id="welcome-heading">Welcome back</h1>
+</div>
+<div class="paragraph" aria-hidden="true"></div>
+</div>
+<div class="form-margin">
+<form class="form" action="#" method="post">
+<div class="div">
+<label class="label" for="email">
+<span class="text-wrapper">Email</span>
+</label>
+<input
+              class="email-input"
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              placeholder="name@example.com"
+              aria-required="true"
+              required
             >
+</div>
+<div class="container">
+<label class="div" for="password">
+<span class="text-wrapper">Password</span>
+</label>
+<div class="container-margin">
+<div class="container-2">
+<input
+                  class="password-input"
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  placeholder="Enter your password"
+                  aria-required="true"
+                  required
+                >
+<button
+                  class="button"
+                  type="button"
+                  aria-controls="password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+<span class="text-wrapper-3">Show</span>
+</button>
+</div>
+</div>
+</div>
+<div class="button-wrapper">
+<button class="div-wrapper" type="submit">
+<span class="text-wrapper-4">Sign in</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<script>
+const passwordInput = document.getElementById("password");
+    const passwordToggle = document.querySelector(".button");
+    const passwordToggleLabel = passwordToggle.querySelector(".text-wrapper-3");
 
-            <br><br>
+    passwordToggle.addEventListener("click", () => {
+      const isPasswordVisible = passwordInput.type === "text";
 
-            <label for="password">Password</label><br>
-            <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-                required
-            >
-
-            <br><br>
-
-            <button type="submit">Sign In</button>
-        </form>
-    </main>
-
+      passwordInput.type = isPasswordVisible ? "password" : "text";
+      passwordToggle.setAttribute("aria-pressed", String(!isPasswordVisible));
+      passwordToggle.setAttribute(
+        "aria-label",
+        isPasswordVisible ? "Show password" : "Hide password"
+      );
+      passwordToggleLabel.textContent = isPasswordVisible ? "Show" : "Hide";
+    });
+  </script>
 </body>
 </html>
