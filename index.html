@@ -5,6 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Schedule - Login</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f6f6f6;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        max-width: 360px;
+        margin: 80px auto;
+        background: white;
+        padding: 32px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 8px;
+        background: #c85a4a;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
 </head>
 
 <body>
@@ -13,7 +54,7 @@
         <h1>Welcome Back</h1>
         <p>Sign in to manage your jobs</p>
 
-        <form>
+        <form method="post" action="#">
             <label for="email">Email</label><br>
             <input
                 type="email"
