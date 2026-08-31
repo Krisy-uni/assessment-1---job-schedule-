@@ -1,15 +1,15 @@
-.job-details-worker {
+.worker-calendar-view {
   width: 100%;
   min-width: 393px;
-  min-height: 853px;
+  min-height: 852px;
   position: relative;
 }
 
-.job-details-worker .employee-job-details {
+.worker-calendar-view .worker-view {
   display: flex;
   flex-direction: column;
   width: 393px;
-  height: 853px;
+  height: 852px;
   align-items: flex-start;
   position: absolute;
   top: 0;
@@ -20,7 +20,7 @@
   box-shadow: 0px 22px 60px #30272129;
 }
 
-.job-details-worker .container {
+.worker-calendar-view .container {
   display: flex;
   height: 26px;
   align-items: flex-start;
@@ -31,7 +31,7 @@
   width: 100%;
 }
 
-.job-details-worker .div-wrapper {
+.worker-calendar-view .div-wrapper {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -40,7 +40,7 @@
   flex: 0 0 auto;
 }
 
-.job-details-worker .text-wrapper {
+.worker-calendar-view .text-wrapper {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -53,7 +53,7 @@
   white-space: nowrap;
 }
 
-.job-details-worker .div {
+.worker-calendar-view .div {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -66,17 +66,18 @@
   white-space: nowrap;
 }
 
-.job-details-worker .section {
+.worker-calendar-view .section {
   display: flex;
   flex-direction: column;
   width: 393px;
-  height: 826px;
+  min-height: 826px;
   align-items: flex-start;
-  padding: 10px;
+  padding: 14px 16px 88px;
   position: relative;
+  flex: 0 0 auto;
 }
 
-.job-details-worker .header {
+.worker-calendar-view .header {
   display: grid;
   grid-template-columns: 42px 277px 42px;
   grid-template-rows: 42px;
@@ -84,12 +85,69 @@
   background-color: transparent;
 }
 
-.job-details-worker .button {
+.worker-calendar-view .button {
   all: unset;
   box-sizing: border-box;
   position: relative;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+  align-self: center;
+  width: 100%;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.worker-calendar-view .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.5px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.31px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.worker-calendar-view .bold-text {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  align-self: center;
+  width: 100%;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #3d352f;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: -0.23px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.worker-calendar-view .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
   align-self: center;
   width: 100%;
   height: 34px;
@@ -101,7 +159,7 @@
   border-radius: 10px;
 }
 
-.job-details-worker .text-wrapper-2 {
+.worker-calendar-view .text-wrapper-4 {
   position: relative;
   width: fit-content;
   margin-top: -1.5px;
@@ -115,403 +173,133 @@
   white-space: nowrap;
 }
 
-.job-details-worker .bold-text {
-  position: relative;
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
-  align-self: center;
-  width: 100%;
-  height: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.job-details-worker .text-wrapper-3 {
-  width: fit-content;
-  font-weight: 700;
-  color: #3d352f;
-  font-size: 15px;
-  text-align: center;
-  letter-spacing: -0.23px;
-  white-space: nowrap;
-  position: relative;
-  margin-top: -1px;
-  font-family: "Inter", Helvetica;
-  line-height: normal;
-}
-
-.job-details-worker .small {
-  position: relative;
-  grid-row: 1 / 2;
-  grid-column: 3 / 4;
-  align-self: center;
-  width: 100%;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.job-details-worker .text-wrapper-4 {
-  width: 42px;
-  font-weight: 400;
-  color: #8b7e74;
-  font-size: 9px;
-  text-align: right;
-  letter-spacing: 0.17px;
-  position: relative;
-  margin-top: -1px;
-  font-family: "Inter", Helvetica;
-  line-height: normal;
-}
-
-.job-details-worker .container-margin-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 370px;
-  align-items: flex-start;
-  padding: 5px 0px 12px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.job-details-worker .container-margin {
+.worker-calendar-view .container-margin {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
-  position: relative;
-  flex: 1;
-  align-self: stretch;
-  width: 100%;
-  flex-grow: 1;
-}
-
-.job-details-worker .section-2 {
-  display: flex;
-  flex-direction: column;
-  height: 196px;
-  align-items: flex-start;
-  padding: 14px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #fffdf9;
-  border-radius: 18px;
-  border: 1px solid;
-  border-color: #eadfd5;
-  box-shadow: 0px 14px 34px #4a3a2e12;
-}
-
-.job-details-worker .container-2 {
-  display: grid;
-  grid-template-columns: 272.06px 50.94px;
-  grid-template-rows: 29px;
-  width: fit-content;
-  height: fit-content;
-  gap: 8px;
-}
-
-.job-details-worker .heading-margin {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  width: 100%;
-  height: 100%;
-  padding: 0px 0px 8px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.job-details-worker .heading {
-  width: 272.06px;
-  height: 21px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.job-details-worker .text-wrapper-5 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #3d352f;
-  font-size: 18px;
-  letter-spacing: -0.44px;
-  line-height: normal;
-}
-
-.job-details-worker .frame {
-  position: relative;
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
-  width: 70.94px;
-  height: fit-content;
-  gap: 10px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.job-details-worker .text {
-  position: relative;
-  flex: 1;
-  align-self: stretch;
-  width: 100%;
-  flex-grow: 1;
-  border-radius: 999px;
-}
-
-.job-details-worker .text-wrapper-6 {
-  position: absolute;
-  top: -6px;
-  left: -34px;
-  font-family: "Inter", Helvetica;
-  font-weight: 800;
-  color: #2f8f57;
-  font-size: 12px;
-  letter-spacing: 0.21px;
-  line-height: normal;
-}
-
-.job-details-worker .container-wrapper {
-  padding: 8px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  padding: 10px 0px 0px;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
 }
 
-.job-details-worker .container-3 {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 49px;
+.worker-calendar-view .container-2 {
+  display: grid;
+  grid-template-columns: 34px 203px 34px 78px;
+  grid-template-rows: 31px;
+  height: fit-content;
+  gap: 4px;
 }
 
-.job-details-worker .text-2 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 5px 7px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #faf6f1;
-  border-radius: 8px;
-}
-
-.job-details-worker .text-wrapper-7 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #8b7e74;
-  font-size: 9px;
-  letter-spacing: 0.17px;
-  line-height: normal;
-}
-
-.job-details-worker .text-3 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 5px 7px;
-  position: absolute;
-  top: 0;
-  left: 88px;
-  background-color: #faf6f1;
-  border-radius: 8px;
-}
-
-.job-details-worker .text-4 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 5px 7px;
-  position: absolute;
-  top: 27px;
-  left: 0;
-  background-color: #faf6f1;
-  border-radius: 8px;
-}
-
-.job-details-worker .paragraph {
-  display: flex;
-  flex-direction: column;
-  width: 331px;
-  height: 35px;
-  align-items: flex-start;
-  padding: 16px 0px 0px;
-  position: relative;
-}
-
-.job-details-worker .do-the-hedge {
-  position: relative;
-  width: 323px;
-  margin-top: -1px;
-  margin-bottom: -18px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #3d352f;
-  font-size: 16px;
-  letter-spacing: -0.31px;
-  line-height: normal;
-}
-
-.job-details-worker .button-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 128px;
-  height: 70px;
-  align-items: flex-start;
-  padding: 10px;
-  position: absolute;
-  top: 320px;
-  left: 237px;
-  background-color: #fffdf9;
-  border-radius: 18px;
-  border: 1px solid;
-  border-color: #eadfd5;
-  box-shadow: 0px 14px 34px #4a3a2e12;
-}
-
-.job-details-worker .button-2 {
+.worker-calendar-view .button-3 {
   all: unset;
   box-sizing: border-box;
   position: relative;
-  align-self: stretch;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  align-self: center;
   width: 100%;
-  height: 48px;
-  background-color: #e3a01a;
-  border-radius: 13px;
-}
-
-.job-details-worker .text-wrapper-8 {
-  top: 14px;
-  left: 15px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 800;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: -0.31px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.job-details-worker .container-4 {
+  height: 20px;
   display: flex;
   flex-direction: column;
-  width: 128px;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px;
-  position: absolute;
-  top: 320px;
-  left: 9px;
-  background-color: #fffdf9;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #eadfd5;
-  box-shadow: 0px 14px 34px #4a3a2e12;
-}
-
-.job-details-worker .button-3 {
-  all: unset;
-  box-sizing: border-box;
-  position: relative;
-  width: 107px;
-  height: 48px;
-  background-color: #d9784f;
-  border-radius: 13px;
-}
-
-.job-details-worker .text-wrapper-9 {
-  top: 15px;
-  left: 135px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 800;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: -0.31px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.job-details-worker .frame-2 {
-  display: flex;
-  flex-direction: column;
-  width: 361px;
-  align-items: flex-start;
-  padding: 10px 5px;
-  position: absolute;
-  top: 523px;
-  left: 16px;
-  background-color: #fffdf9;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #eadfd5;
-  box-shadow: 0px 14px 34px #4a3a2e12;
-}
-
-.job-details-worker .container-5 {
-  display: flex;
-  height: 50px;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  border: 1px solid;
-  border-color: #eadfd5;
-}
-
-.job-details-worker .container-6 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
-  position: relative;
-  flex: 1;
-  align-self: stretch;
-  flex-grow: 1;
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-color: #eadfd5;
-}
-
-.job-details-worker .text-5 {
-  display: flex;
-  flex-direction: column;
-  width: 88.66px;
-  height: 13px;
   align-items: center;
-  padding: 0px 0px 5px;
-  position: relative;
+  justify-content: center;
+  padding: 1px 6px;
 }
 
-.job-details-worker .text-wrapper-10 {
+.worker-calendar-view .bold-text-2 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  align-self: center;
+  width: 100%;
+  height: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .p {
   position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: "Inter", Helvetica;
-  font-weight: 400;
+  font-weight: 700;
+  color: #3d352f;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0.06px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.worker-calendar-view .button-4 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  align-self: center;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 6px;
+}
+
+.worker-calendar-view .dropdown {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+  align-self: center;
+  width: 100%;
+  height: 31px;
+}
+
+.worker-calendar-view .container-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #fffdf9;
+  border-radius: 18px;
+  border: 1px solid;
+  border-color: #eadfd5;
+  box-shadow: 0px 14px 34px #4a3a2e12;
+}
+
+.worker-calendar-view .container-4 {
+  display: grid;
+  grid-template-columns: 45.84px 45.86px 45.86px 45.86px 45.86px 45.86px 45.86px;
+  grid-template-rows: 8px;
+  height: fit-content;
+  gap: 3px;
+}
+
+.worker-calendar-view .text {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
   color: #8b7e74;
   font-size: 7px;
   text-align: center;
@@ -520,255 +308,662 @@
   white-space: nowrap;
 }
 
-.job-details-worker .container-7 {
+.worker-calendar-view .text-2 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .text-3 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .text-4 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .text-5 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 5 / 6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .text-6 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 6 / 7;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .text-7 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 7 / 8;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worker-calendar-view .container-wrapper {
+  flex-direction: column;
+  padding: 7px 0px 0px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
   position: relative;
   align-self: stretch;
   width: 100%;
-  height: 18px;
-  margin-bottom: -3px;
 }
 
-.job-details-worker .text-wrapper-11 {
-  position: absolute;
-  top: 4px;
-  left: 22px;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #3d352f;
-  font-size: 11px;
-  text-align: center;
-  letter-spacing: 0.06px;
-  line-height: normal;
-  white-space: nowrap;
+.worker-calendar-view .container-5 {
+  display: grid;
+  grid-template-columns: 45.84px 45.86px 45.86px 45.86px 45.86px 45.86px 45.86px;
+  grid-template-rows: 47px 47px;
+  height: fit-content;
+  gap: 3px;
 }
 
-.job-details-worker .text-6 {
-  display: flex;
-  flex-direction: column;
-  width: 88.67px;
-  height: 13px;
-  align-items: center;
-  padding: 0px 0px 5px;
+.worker-calendar-view .button-5 {
+  all: unset;
+  box-sizing: border-box;
   position: relative;
-}
-
-.job-details-worker .container-8 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px;
-  position: relative;
-  flex: 1;
-  align-self: stretch;
-  flex-grow: 1;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
 }
 
-.job-details-worker .text-7 {
+.worker-calendar-view .text-margin {
   display: flex;
   flex-direction: column;
-  width: 89.66px;
-  height: 13px;
   align-items: center;
-  padding: 0px 0px 5px;
-  position: relative;
-}
-
-.job-details-worker .text-wrapper-12 {
-  position: absolute;
-  top: 4px;
-  left: 26px;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #3d352f;
-  font-size: 11px;
-  text-align: center;
-  letter-spacing: 0.06px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.job-details-worker .p {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #8b7e74;
-  font-size: 16px;
-  letter-spacing: -0.31px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.job-details-worker .container-margin-2 {
-  padding: 16px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
 }
 
-.job-details-worker .label-wrapper {
+.worker-calendar-view .text-8 {
   display: grid;
-  grid-template-columns: 105px;
-  grid-template-rows: 105px;
-  height: fit-content;
-  gap: 8px;
+  grid-template-columns: 26px;
+  grid-template-rows: 26px;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
 }
 
-.job-details-worker .label {
+.worker-calendar-view .text-wrapper-6 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  width: 14px;
+  height: 15px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.worker-calendar-view .text-9 {
+  position: relative;
+  width: 45.84px;
+  height: 11px;
+}
+
+.worker-calendar-view .button-6 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .text-10 {
+  position: relative;
+  width: 45.86px;
+  height: 11px;
+}
+
+.worker-calendar-view .button-7 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .text-wrapper-7 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  width: 15px;
+  height: 15px;
+  color: #000000;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  position: relative;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.worker-calendar-view .text-11 {
+  display: flex;
+  width: 45.86px;
+  height: 11px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 4px 0px 0px;
+  position: relative;
+}
+
+.worker-calendar-view .italic-text {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  background-color: #2f8f57;
+  border-radius: 3.5px;
+}
+
+.worker-calendar-view .button-8 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .button-9 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 5 / 6;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .italic-text-2 {
+  position: relative;
+  background-color: #e34949;
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+}
+
+.worker-calendar-view .button-10 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 6 / 7;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .button-11 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 7 / 8;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .button-12 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .italic-text-wrapper {
+  display: flex;
+  width: 45.84px;
+  height: 11px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 4px 0px 0px;
+  position: relative;
+}
+
+.worker-calendar-view .button-13 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .text-12 {
   display: grid;
-  grid-template-columns: 103px;
-  grid-template-rows: 61.5px 41.5px;
+  grid-template-columns: 26px;
+  grid-template-rows: 26px;
+  width: 26px;
+  height: 26px;
+  background-color: #d9784f;
+  border-radius: 13px;
+}
+
+.worker-calendar-view .text-wrapper-8 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  width: 16px;
+  height: 15px;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  position: relative;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.worker-calendar-view .italic-text-3 {
+  position: relative;
+  background-color: #e3a01a;
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+}
+
+.worker-calendar-view .button-14 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .button-15 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .text-wrapper-9 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  width: 16px;
+  height: 15px;
+  color: #000000;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  position: relative;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.worker-calendar-view .button-16 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 2 / 3;
+  grid-column: 5 / 6;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .button-17 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 2 / 3;
+  grid-column: 6 / 7;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .button-18 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  grid-row: 2 / 3;
+  grid-column: 7 / 8;
+  width: 100%;
+  min-height: 47px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 11px;
+}
+
+.worker-calendar-view .container-6 {
+  display: grid;
+  grid-template-columns: 89.75px 89.75px 89.75px 89.75px;
+  grid-template-rows: 58px;
+  height: 60px;
+  background-color: #fffdf9;
+  border-radius: 13px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #eadfd5;
+}
+
+.worker-calendar-view .container-7 {
   position: relative;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   width: 100%;
+  min-height: 58px;
   height: 100%;
-  background-color: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px dashed;
-  border-color: #d8c9bd;
-}
-
-.job-details-worker .text-8 {
-  position: relative;
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  justify-self: center;
-  align-self: center;
-  width: 23px;
-  height: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-color: #eadfd5;
 }
 
-.job-details-worker .text-wrapper-13 {
+.worker-calendar-view .text-13 {
   position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #8b7e74;
-  font-size: 22px;
-  text-align: center;
-  letter-spacing: -0.26px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.job-details-worker .small-2 {
-  position: relative;
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
-  justify-self: center;
-  align-self: center;
-  width: 45.38px;
+  width: 43.08px;
   height: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.job-details-worker .text-wrapper-14 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  margin-left: -0.31px;
-  margin-right: -0.31px;
+.worker-calendar-view .italic-text-4 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  background-color: #e3a01a;
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+}
+
+.worker-calendar-view .text-wrapper-10 {
+  position: absolute;
+  top: 0;
+  left: 11px;
   font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #8b7e74;
   font-size: 8px;
-  text-align: center;
   letter-spacing: 0.21px;
   line-height: normal;
 }
 
-.job-details-worker .button-4 {
-  all: unset;
-  box-sizing: border-box;
-  position: absolute;
-  top: 765px;
-  left: 22px;
-  width: 361px;
-  height: 48px;
-  display: flex;
-  background-color: #2f8f57;
-  border-radius: 13px;
-}
-
-.job-details-worker .text-wrapper-15 {
-  margin-top: 15px;
-  width: 168px;
-  height: 19px;
-  margin-left: 96.8px;
-  font-family: "Inter", Helvetica;
-  font-weight: 800;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: -0.31px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.job-details-worker .text-wrapper-16 {
-  position: absolute;
-  top: 427px;
-  left: 48px;
-  font-family: "Inter", Helvetica;
-  font-weight: 800;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: -0.31px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.job-details-worker .frame-3 {
-  width: 361px;
-  position: absolute;
-  top: 285px;
-  left: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.job-details-worker .container-9 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 14px;
+.worker-calendar-view .text-wrapper-11 {
+  width: fit-content;
+  color: #3d352f;
+  font-size: 18px;
+  letter-spacing: -0.44px;
   position: relative;
-  align-self: stretch;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.worker-calendar-view .container-8 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
   width: 100%;
-  flex: 0 0 auto;
-  background-color: #fffdf9;
-  border-radius: 18px;
-  border: 1px solid;
+  min-height: 58px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-right-width: 1px;
+  border-right-style: solid;
   border-color: #eadfd5;
-  box-shadow: 0px 14px 34px #4a3a2e12;
 }
 
-.job-details-worker .div-wrapper-2 {
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
+.worker-calendar-view .text-14 {
   position: relative;
+  width: 48.55px;
+  height: 10px;
+}
+
+.worker-calendar-view .italic-text-5 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  background-color: #2f8f57;
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+}
+
+.worker-calendar-view .container-9 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  width: 100%;
+  min-height: 58px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-color: #eadfd5;
 }
 
-.job-details-worker .text-wrapper-17 {
+.worker-calendar-view .text-15 {
+  position: relative;
+  width: 45.67px;
+  height: 10px;
+}
+
+.worker-calendar-view .italic-text-6 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  background-color: #e34949;
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+}
+
+.worker-calendar-view .container-10 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+  width: 100%;
+  min-height: 58px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.worker-calendar-view .text-wrapper-12 {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #8b7e74;
+  font-size: 8px;
+  letter-spacing: 0.21px;
+  line-height: normal;
+}
+
+.worker-calendar-view .container-11 {
+  display: flex;
+  width: 361px;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0px 0px;
+  position: relative;
+}
+
+.worker-calendar-view .div-wrapper-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.worker-calendar-view .text-wrapper-13 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -780,8 +975,70 @@
   line-height: normal;
 }
 
-.job-details-worker .container-margin-3 {
-  padding: 10px 0px 0px;
+.worker-calendar-view .text-wrapper-14 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #8b7e74;
+  font-size: 9px;
+  letter-spacing: 0.17px;
+  line-height: normal;
+}
+
+.worker-calendar-view .container-margin-2 {
+  height: 380px;
+  padding: 8px 0px 0px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.worker-calendar-view .container-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.worker-calendar-view .button-19 {
+  display: flex;
+  width: 361px;
+  height: 86px;
+  align-items: center;
+  padding: 12px 42px 12px 12px;
+  position: relative;
+  background-color: #fffdf9;
+  border-radius: 14px;
+  border: 1px solid;
+  border-color: #eadfd5;
+}
+
+.worker-calendar-view .container-13 {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px 49px 0px 0px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.worker-calendar-view .container-14 {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+}
+
+.worker-calendar-view .container-15 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -791,118 +1048,284 @@
   flex: 0 0 auto;
 }
 
-.job-details-worker .container-10 {
-  display: grid;
-  grid-template-columns: 36px 239px 36px;
-  grid-template-rows: 36px;
-  height: fit-content;
+.worker-calendar-view .text-wrapper-15 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: -0.08px;
+  line-height: normal;
+}
+
+.worker-calendar-view .element-am-pm-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: 31px;
+  align-items: flex-start;
+  padding: 4px 0px 0px;
+  position: relative;
+  margin-right: -10px;
+}
+
+.worker-calendar-view .text-wrapper-16 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  margin-bottom: -13px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #8b7e74;
+  font-size: 9px;
+  letter-spacing: 0.17px;
+  line-height: 13.5px;
+}
+
+.worker-calendar-view .text-16 {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  border-radius: 999px;
+}
+
+.worker-calendar-view .frame {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  align-items: flex-start;
   gap: 10px;
-  padding: 10px 0px;
+  position: relative;
+}
+
+.worker-calendar-view .text-17 {
+  display: flex;
+  height: 30px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #2f8f57;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.worker-calendar-view .text-wrapper-17 {
+  position: relative;
+  width: 49px;
+  margin-bottom: -5px;
+  font-family: "Inter", Helvetica;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.21px;
+  line-height: normal;
+}
+
+.worker-calendar-view .button-20 {
+  display: flex;
+  flex-direction: column;
+  width: 361px;
+  height: 86px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 12px;
+  position: relative;
+  background-color: #fffdf9;
+  border-radius: 14px;
+  border: 1px solid;
+  border-color: #eadfd5;
+}
+
+.worker-calendar-view .container-16 {
+  display: grid;
+  grid-template-columns: 270.25px 56.75px;
+  grid-template-rows: 47px;
+  height: fit-content;
+  gap: 8px;
+}
+
+.worker-calendar-view .container-17 {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.worker-calendar-view .element-pm-pm-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 270.25px;
+  height: 31px;
+  align-items: flex-start;
+  padding: 4px 0px 0px;
+  position: relative;
+}
+
+.worker-calendar-view .text-18 {
+  position: absolute;
+  top: 1px;
+  left: 258px;
+  width: 57px;
+  height: 47px;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px 8px;
+  border-radius: 999px;
+}
+
+.worker-calendar-view .text-wrapper-18 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  margin-right: -19.25px;
+  font-family: "Inter", Helvetica;
+  font-weight: 800;
+  color: #2f8f57;
+  font-size: 12px;
+  letter-spacing: 0.21px;
+  line-height: normal;
+}
+
+.worker-calendar-view .navigation {
+  position: absolute;
+  top: 768px;
+  left: 3px;
+  width: 393px;
+  height: 58px;
+  background-color: #fffdf9fa;
   border-top-width: 1px;
   border-top-style: solid;
   border-color: #eadfd5;
 }
 
-.job-details-worker .text-9 {
-  display: grid;
-  grid-template-columns: 36px;
-  grid-template-rows: 36px;
-  width: 36px;
-  height: 36px;
-  position: relative;
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  justify-self: start;
-  align-self: center;
-  background-color: #f0e6df;
-  border-radius: 18px;
-}
-
-.job-details-worker .text-wrapper-18 {
-  position: relative;
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  justify-self: center;
-  align-self: center;
-  width: 14px;
-  height: 12px;
-  font-family: "Inter", Helvetica;
-  font-weight: 800;
-  color: #3d352f;
-  font-size: 10px;
-  letter-spacing: 0.12px;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.job-details-worker .text-10 {
-  position: relative;
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
-  align-self: center;
-  width: 100%;
-  height: fit-content;
-  display: flex;
+.worker-calendar-view .button-21 {
+  display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 3px;
+  padding: 1px 6px;
+  position: absolute;
+  top: 13px;
+  left: 29px;
 }
 
-.job-details-worker .text-wrapper-19 {
+.worker-calendar-view .text-wrapper-19 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #3d352f;
-  font-size: 10px;
-  letter-spacing: 0.12px;
+  font-weight: 400;
+  color: #d9784f;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.31px;
   line-height: normal;
   white-space: nowrap;
 }
 
-.job-details-worker .text-wrapper-20 {
+.worker-calendar-view .text-wrapper-20 {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #d9784f;
+  font-size: 8px;
+  text-align: center;
+  letter-spacing: 0.21px;
+  line-height: normal;
+}
+
+.worker-calendar-view .button-22 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 6px;
+  position: absolute;
+  top: 13px;
+  left: 136px;
+}
+
+.worker-calendar-view .text-wrapper-21 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #8b7e74;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.31px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.worker-calendar-view .text-wrapper-22 {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #8b7e74;
   font-size: 8px;
+  text-align: center;
   letter-spacing: 0.21px;
   line-height: normal;
 }
 
-.job-details-worker .button-5 {
-  all: unset;
-  box-sizing: border-box;
-  position: relative;
-  grid-row: 1 / 2;
-  grid-column: 3 / 4;
-  justify-self: start;
-  align-self: center;
-  width: 36px;
-  height: 36px;
-  display: flex;
+.worker-calendar-view .button-23 {
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 3px;
   padding: 1px 6px;
-  background-color: #f2fbf6;
-  border-radius: 10px;
-  border: 1px solid;
-  border-color: #a8d7ba;
+  position: absolute;
+  top: 12px;
+  left: 225px;
 }
 
-.job-details-worker .text-wrapper-21 {
-  position: relative;
-  width: fit-content;
+.worker-calendar-view .button-24 {
+  display: inline-flex;
+  flex-direction: column;
+  height: 35px;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 6px;
+  position: absolute;
+  top: 12px;
+  left: 329px;
+}
+
+.worker-calendar-view .frame-2 {
+  position: absolute;
+  top: 400px;
+  left: 297px;
+  width: 70px;
+  height: 30px;
+  background-color: #e34949;
+  border-radius: 6px;
+  border: 1px solid;
+  border-color: #ffffff;
+}
+
+.worker-calendar-view .decline {
+  position: absolute;
+  top: 407px;
+  left: 309px;
   font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #2f8f57;
-  font-size: 17px;
-  text-align: center;
-  letter-spacing: -0.43px;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0.21px;
   line-height: normal;
-  white-space: nowrap;
 }
