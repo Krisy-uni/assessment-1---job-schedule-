@@ -44,4 +44,4 @@ The current implementation is a sample application and does not yet implement al
 
 ## Deployment
 
-Deployment URL: To be added after EC2 deployment.
+Deployment URL: http://13.211.204.157/login.html
