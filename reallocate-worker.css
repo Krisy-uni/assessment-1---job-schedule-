@@ -787,3 +787,10 @@
   line-height: normal;
   white-space: nowrap;
 }
+.reallocate-worker .selected-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d9784f;
+  border-radius: 50%;
+  margin: 3px;
+}

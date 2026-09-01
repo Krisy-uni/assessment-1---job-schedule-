@@ -137,10 +137,11 @@
 
 .owner-view-empty .container {
   display: grid;
-  grid-template-columns: 34px 203px 34px 78px;
+  grid-template-columns: 40px 1fr 40px;
   grid-template-rows: 31px;
+  width: 100%;
   height: fit-content;
-  gap: 4px;
+  gap: 0;
 }
 
 .owner-view-empty .button-2 {
@@ -156,7 +157,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1px 6px;
+  padding: 0;
 }
 
 .owner-view-empty .bold-text-2 {
@@ -198,7 +199,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1px 6px;
+  padding: 0;
 }
 
 .owner-view-empty .dropdown {

@@ -436,14 +436,16 @@
   position: relative;
   width: 107px;
   height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #d9784f;
   border-radius: 13px;
+  cursor: pointer;
 }
 
 .job-details-worker .text-wrapper-9 {
-  top: 15px;
-  left: 135px;
-  position: absolute;
+  position: static;
   font-family: "Inter", Helvetica;
   font-weight: 800;
   color: #ffffff;
@@ -905,4 +907,23 @@
   letter-spacing: -0.43px;
   line-height: normal;
   white-space: nowrap;
+}
+.job-details-worker .button-2:not(:disabled),
+.job-details-worker .button-3:not(:disabled) {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.job-details-worker .button-2:disabled,
+.job-details-worker .button-3:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.job-details-worker .button-2:focus,
+.job-details-worker .button-2:focus-visible,
+.job-details-worker .button-3:focus,
+.job-details-worker .button-3:focus-visible {
+  outline: none;
+  box-shadow: none;
 }

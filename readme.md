@@ -3,6 +3,29 @@
 
 # Calendar-based Work Scheduling Web Application
 
+## Demo Login Accounts
+
+The following demo accounts can be used to test role-based access.
+
+### Owner Account
+
+- **Email:** `owner@jobflow.com`
+- **Password:** `Owner123`
+- **Redirect:** `owner-view.html`
+
+### Worker Accounts
+
+| Worker | Email | Password |
+|---|---|---|
+| Sarah Johnson | `sarah@jobflow.com` | `Worker123` |
+| Mike Lee | `mike@jobflow.com` | `Worker123` |
+| Emma Brown | `emma@jobflow.com` | `Worker123` |
+| James Wilson | `james@jobflow.com` | `Worker123` |
+
+All Worker accounts are redirected to `worker-view.html` after successful login.
+
+
+
 A mobile-first web application designed to support job scheduling, allocation and worker management for small trade businesses.
 
 ## Setup

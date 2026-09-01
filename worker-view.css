@@ -184,10 +184,10 @@
 
 .worker-view .container-2 {
   display: grid;
-  grid-template-columns: 34px 203px 34px 78px;
-  grid-template-rows: 31px;
-  height: fit-content;
-  gap: 4px;
+  grid-template-columns: 40px 1fr 40px;
+  width: 100%;
+  align-items: center;
+  gap: 0;
 }
 
 .worker-view .button-3 {
@@ -203,7 +203,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1px 6px;
+  padding: 0;
 }
 
 .worker-view .bold-text-2 {
@@ -245,7 +245,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1px 6px;
+  padding: 0;
 }
 
 .worker-view .dropdown {
@@ -1325,4 +1325,81 @@
   padding: 4px 0px 0px;
   position: relative;
   margin-right: -10px;
+}
+.worker-view .dynamic-worker-job {
+  box-sizing: border-box;
+  width: 361px;
+  height: 86px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.worker-view .worker-job-information {
+  flex: 1;
+  min-width: 0;
+}
+
+.worker-view .worker-job-description {
+  margin-top: 6px;
+  color: #8b7e74;
+  font-family: "Inter", Helvetica;
+  font-size: 9px;
+  line-height: 13.5px;
+}
+
+.worker-view .worker-action-buttons {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  margin-left: 12px;
+}
+
+.worker-view .decline-button,
+.worker-view .accept-button {
+  box-sizing: border-box;
+  width: 70px;
+  height: 30px;
+  padding: 0;
+  color: white;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 800;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.worker-view .decline-button {
+  background-color: #e34949;
+}
+
+.worker-view .accept-button {
+  background-color: #2f8f57;
+}
+
+.worker-view .worker-job-status {
+  flex-shrink: 0;
+  margin-left: 12px;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.worker-view .worker-job-status.accepted {
+  color: #2f8f57;
+}
+
+.worker-view .worker-job-status.declined {
+  color: #e34949;
+}
+.worker-view .clickable-job {
+  cursor: pointer;
+}
+
+.worker-view .non-clickable-job {
+  cursor: default;
 }
